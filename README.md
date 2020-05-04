@@ -28,3 +28,13 @@ https://medium.com/binar-academy/rails-api-jwt-authentication-a04503ea3248
 13. rails g controller authentication
 14. implement login features in authentication controller
 15. rails db:migrate
+16. rails c
+    User.create(name: 'test',
+            username: 'test',
+            password: 'foobar',
+            password_confirmation: 'foobar',
+            email: 'test@test.com'
+            )
+17. test by using httpie
+    http POST :3000/auth/login email=test@test.com password=foobar
+    -> you should get a return json with the token
